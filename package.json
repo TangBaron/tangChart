@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "test-live": "cross-env DEBUG_MODE=1 jest --coverage",
+    "test-renderer": "cross-env DEBUG_MODE=1 jest __tests__/renderer/renderer.spec.js",
     "lint": "eslint --fix",
     "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
     "prepare": "husky install",
@@ -14,12 +15,12 @@
   "keywords": [],
   "author": "tangyijun",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/jest": "^29.2.0",
     "babel-jest": "^29.1.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.24.0",
